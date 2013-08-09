@@ -1,11 +1,23 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<meta charset="utf-8">
 		<title>Gry</title>
+		<style>
+			.firstNr, .sign, .secondNr, .equal, .result {font-size: 70px; font-weight: bold;}
+			input.result {width: 60px; text-align: center;}
+		</style>
 	</head>
 	<body>
 		<section>
-			
+			<span class="firstNr">1</span>
+			<span class="sign">+</span>
+			<span class="secondNr">2</span>
+			<span class="equal">=</span>
+			<input class="result" type="text" name="result" />
+			<button class="count" name="count">Sprawdź</button>
 		</section>
+		<script src="jquery.js"></script>
+		<script src="scripts.js"></script>
 	</body>
 </html>
