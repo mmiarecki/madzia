@@ -2,7 +2,7 @@ var Count = function() {
     var one = 1;
     var two = 2;
     var sign = "+";
-    var maxRange = 10;
+    var maxRange = 20;
     
     this.getOne = function() {
         return one;
@@ -34,7 +34,7 @@ var Count = function() {
     
     var getMaxRange = function() {
     	return maxRange;
-    }
+    };
     
     this.setCountEvent = function() {
         jQuery('button.count').on('click', function(event){
@@ -52,7 +52,7 @@ var Count = function() {
             return positiveFeedback();
         }
         return helpFeedback();
-    }
+    };
     
     var positiveFeedback = function() {
         alert('Bardzo dobrze!!');
@@ -60,8 +60,9 @@ var Count = function() {
     };
     
     var helpFeedback = function() {
-        alert('Niestety źle!');
-    }
+    	alert('Niestety źle!');
+    	jQuery('input.result').val('');
+    };
     
     var createNewEquation = function() {
     	var max = getMaxRange();
@@ -76,8 +77,8 @@ var Count = function() {
     	jQuery('span.firstNr').text(count.getOne());
     	jQuery('span.secondNr').text(count.getTwo());
     	jQuery('input.result').val('');
-    }
-}
+    };
+};
 
 var count = new Count();
 count.setCountEvent();
